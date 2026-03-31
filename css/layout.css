@@ -1,0 +1,304 @@
+/**************************************************************
+   #content: Sets the width of the site.  Make changes here
+             to convert to a fixed width site.
+ **************************************************************/
+
+#contentcenter {  
+  height: 100%;
+  min-height: 100%;
+
+  text-align: center;
+}
+
+#content {  
+  height: 100%;
+  min-height: 100%;
+
+  text-align: left;
+}
+
+#content,
+#contentcenter,
+#width {
+  /* max-width hack for IE since it doesn't understand the valid css property */
+  width: expression(document.body.clientWidth > 1000 ? "1000px" : "94%");  
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#content[id],
+#contentcenter[id],
+#width[id] {
+  width: 94%;
+  height: auto;
+}
+
+
+
+/**************************************************************
+   #mainMenu: The top level site menu
+ **************************************************************/
+
+#mainMenu { 
+  float: left;
+  width: 100%;
+  clear: both;  
+}
+
+#mainMenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#mainMenu li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#mainMenu li a {
+  float: left;
+  margin: 0 2px;
+  padding: 5px 0.5em;
+
+  font: 400 1.6em "trebuchet ms", serif;
+  text-decoration: none;
+  text-transform: none;
+  color: #FFF;
+}
+
+#mainMenu li a:hover,
+#mainMenu li a.here {
+  color: #65EBFF;
+  border-top: 5px solid #000;
+}
+
+#mainMenu li a.last {
+  margin-right: 0;
+}
+
+
+
+
+/**************************************************************
+   .sideMenu: The side bar menu
+ **************************************************************/
+
+ul.sideMenu {
+  margin: 0;
+  padding: 0;
+}
+
+.sideMenu li {
+  display: inline;
+  
+  /* Needed since IE fails when you give it list-style: none; */  
+  list-style-image: url(foo.gif);
+  font: 400 1.3em "trebuchet ms", serif;
+}
+
+.sideMenu li a {
+  display: block;
+  margin: 0.2em 0;
+  padding: 3px 5px;    
+  
+  text-decoration: none;
+  color: #FFF;
+} 
+
+.sideMenu li a:hover {
+  color: #65EBFF;
+  background: #5F5F5F;
+}
+
+/* Active menu item */
+.sideMenu li.here {
+  display: block;  
+  padding: 5px;
+  color: #65EBFF;
+  background: #555;
+}
+
+/* Submenu of active menu item */
+.sideMenu li.here ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sideMenu li.here ul li a {
+  padding-left: 35px;
+  font: 400 0.55em verdana, arial, sans-serif; 
+  color: #FFF;  
+  background: url(../images/bg/bullet.gif) no-repeat 10px 0px;
+}
+
+.sideMenu li.here ul li a:hover {
+  color: #9FF3FF;
+  background: #5F5F5F url(../images/bg/bullet.gif) no-repeat 10px 0px;
+}
+
+
+
+/**************************************************************
+   #page: Holds the main page content.
+ **************************************************************/
+
+#page {
+  float: left;
+  text-align: left
+  width: 100%;
+  clear: both;
+  
+  padding-bottom: 4em;
+}
+
+#pagecenter {
+  float: left;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  
+  padding-bottom: 4em;
+}
+
+
+
+
+/**************************************************************
+   #footer: The page footer - will stick to the bottom if not
+            enough content.
+ **************************************************************/
+
+#footer {
+  float: left;
+  width: 100%;
+  clear: both;
+  
+  margin-top: -3.8em;
+  background: #000 url(../images/bg/footer.jpg) repeat-x top left;
+}
+
+/* Sets the width of the footer content */
+#footer #width {
+  position: relative;
+  z-index: 3;
+  font-size: 0.85em;
+  padding-top: 27px;
+}
+
+
+
+/**************************************************************
+   Width classes used by the site columns
+ **************************************************************/
+
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 74%;
+}
+
+.width50 {
+  width: 49.7%;
+}
+
+.width33 {
+  width: 32.7%;
+}
+
+.width25 {
+  width: 24.7%;
+}
+
+
+
+/**************************************************************
+   Alignment classes
+ **************************************************************/
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+
+
+/**************************************************************
+   Generic display classes
+ **************************************************************/
+
+.clear {
+  clear: both;
+}
+
+.block {
+  display: block;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.green {
+  color: #A1FF45;
+}
+
+.red {
+  color: #EA1B00;
+}
+
+.grey {
+  color: #666;
+}
+
+.grey a {
+  color: #999;
+}
+
+.grey a:hover {
+  color: #EEE;
+}
+
+.gradient {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  background: #555 url(../images/bg/gradient.jpg) repeat-x bottom left; 
+}
+
+.buttonClass {
+  font-size:10px;
+  width:100px;
+  height:30px;
+  border-width:1px;
+  color:rgba(255, 255, 255, 1);
+  border-color:rgba(144, 19, 254, 1);
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px rgba(41, 8, 70, 1);
+  background:linear-gradient(rgba(144, 19, 254, 1), rgba(76, 5, 138, 1));
+}
+
+.buttonClass:hover {
+  background: linear-gradient(rgba(76, 5, 138, 1), rgba(144, 19, 254, 1));
+}
